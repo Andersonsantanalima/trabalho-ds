@@ -21,5 +21,34 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+
+        private void Btncadastrar_Click(object sender, EventArgs e)
+        {
+           
+            Cadastro pokecadastro = new Cadastro();
+            
+            pokecadastro.pokenome = txtNome.Text;
+            pokecadastro.pokebola = cbpokebola.Text;
+            pokecadastro.hp = Convert.ToInt32(txthp.Text);
+            pokecadastro.atk = Convert.ToInt32(txtatck.Text);
+            pokecadastro.data = Convert.ToDateTime(dtpcap.Text);
+
+            if(pokecadastro.cadastrar() == true)
+            {
+                MessageBox.Show("Pokemon codastrado na Pokedex");
+            }
+            else
+            {
+                MessageBox.Show("Erro no cadastro");
+            }
+
+        }
     }
 }
