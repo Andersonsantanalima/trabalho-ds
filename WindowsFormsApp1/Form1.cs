@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,12 +43,18 @@ namespace WindowsFormsApp1
             if(pokecadastro.cadastrar() == true)
             {
                 MessageBox.Show("Pokemon codastrado na Pokedex");
+                dataGridView3.Rows.Add(txtNome.Text, txthp.Text, txtatck.Text, dtpcap.Text, cbpokebola.Text);
             }
             else
             {
                 MessageBox.Show("Erro no cadastro");
             }
+            
+        }
 
+        private void DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = new DataGridView();
         }
     }
 }
